@@ -3,166 +3,468 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Handyman.direct — UK • Find Talent or Find Work</title>
-  <meta name="description" content="Handyman.direct — UK-first marketplace. Find verified tradespeople or find quality jobs. Minimal, fast, and direct.">
-  <meta property="og:title" content="Handyman.direct — UK • Find Talent or Find Work">
-  <meta property="og:description" content="UK-first marketplace. Verified pros. AI-automated quote builder.">
+  <title>hdirect — London Home Improvement, Powered by AI</title>
+  <meta name="description" content="Connect with verified London tradespeople or post a job in your area. AI-matched. Direct. Fast.">
+  <meta property="og:title" content="hdirect — London's AI Home Improvement Network">
+  <meta property="og:description" content="Find verified tradespeople in your London borough — or claim your pro spot before it fills.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/og.png">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#">
-        <img src="/assets/favicon.svg" alt="" width="24" height="24">
-        <span>handyman<span class="dot">.</span>direct</span>
+        <img src="/assets/favicon.svg" alt="" width="26" height="26">
+        <span>h<span class="dot">direct</span></span>
       </a>
-      <div class="uk-pill">
-        <span class="flag">UK</span> UK-first
-      </div>
       <nav class="nav-links">
+        <a href="#map">London Map</a>
         <a href="#how">How it works</a>
-        <a href="#for-clients">For clients</a>
-        <a href="#for-pros">For handymen</a>
-        <a href="#contact" class="btn small">Get updates</a>
+        <a href="#post-job" class="btn small primary">Post a Job</a>
+        <a href="#join-pro" class="btn small ghost">Join as Pro</a>
       </nav>
     </div>
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="container hero-grid">
+      <div class="container hero-inner">
         <div class="hero-copy">
-          <h1>Book trusted pros,<br><span class="accent">direct</span>.</h1>
-          <p class="lead">A minimalist, UK-first marketplace connecting homeowners with verified handymen. No middlemen. Transparent. Fast.</p>
-          <div class="cta-row">
-            <a href="#for-clients" class="btn big">Find talent</a>
-            <a href="#for-pros" class="btn outline big">Find work</a>
+          <div class="hero-badge">
+            <span class="pulse-dot green"></span>
+            <span>Live in London — <strong id="liveCount">47 pros</strong> active now</span>
           </div>
-          <p class="sub-note"><span class="flag">UK</span> Serving London & major UK cities first.</p>
+          <h1>London's AI&#8209;powered<br><span class="gradient-text">home improvement</span><br>network</h1>
+          <p class="lead">Find verified tradespeople in your borough — or claim your pro spot before it fills. Transparent pricing. No middlemen. Direct.</p>
+          <div class="hero-ctas">
+            <a href="#post-job" class="btn big primary">Post a job</a>
+            <a href="#join-pro" class="btn big ghost">Join as a pro <span class="badge-hot">Spots filling fast</span></a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong class="stat-num">340+</strong>
+              <span>Jobs posted</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong class="stat-num">94</strong>
+              <span>Verified pros</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong class="stat-num">28</strong>
+              <span>Boroughs covered</span>
+            </div>
+          </div>
         </div>
-        <div class="hero-media card">
-          <img src="/assets/handyman.jpg" alt="UK handyman at work" class="image">
-          <ul class="ticks">
-            <li>Manually verified & reliable talent</li>
-            <li>AI-automated quote builder</li>
-            <li>Direct messaging & clear pricing</li>
-          </ul>
+        <div class="hero-map-wrap">
+          <div class="map-mini-card">
+            <div class="map-card-label">London · Live availability</div>
+            <div class="mini-map-container">
+              <svg id="heroSvg" viewBox="0 0 580 370" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12"/>
+                    <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <ellipse cx="290" cy="185" rx="255" ry="168" fill="url(#heroGlow)"/>
+                <path class="london-outline" d="M105,62 C130,52 165,48 200,48 C230,46 260,42 295,38 C330,36 360,42 390,48 C420,52 445,50 465,58 C478,65 480,82 478,105 C476,130 470,155 468,178 C466,200 462,218 462,235 C460,250 455,265 445,280 C430,300 415,318 395,330 C370,344 345,350 315,352 C285,354 255,352 225,348 C195,344 170,338 148,330 C125,320 108,305 100,288 C90,268 87,245 87,222 C87,198 90,175 95,152 C100,128 105,108 105,88 Z"/>
+                <path class="thames" d="M87,218 C102,226 118,230 136,228 C153,226 168,218 184,210 C200,202 215,198 232,196 C248,194 262,192 276,190 C292,188 305,186 320,186 C336,186 350,188 364,192 C381,197 397,205 415,212 C432,218 450,220 468,218"/>
+                <g id="heroNodes"></g>
+              </svg>
+            </div>
+            <div class="map-ticker">
+              <span class="ticker-dot"></span>
+              <span id="tickerText">Marcus T. (Plumber) joined Hackney · 2 spots left</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="how" class="how">
+    <!-- LONDON MAP -->
+    <section id="map" class="map-section">
       <div class="container">
-        <h2>How it works</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <h3>Choose your path</h3>
-            <p>Find <strong>talent</strong> for your job or <strong>find work</strong> as a handyman.</p>
+        <div class="section-head">
+          <div>
+            <h2>London talent map</h2>
+            <p class="lead">Spots are strictly limited to <strong>3 pros per trade, per borough</strong>. Many areas are already filling up.</p>
           </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <h3>Smart scoping</h3>
-            <p>Our AI-automated quote builder drafts clear estimates from your brief and photos.</p>
+          <div class="map-legend">
+            <span class="legend-item open">Open</span>
+            <span class="legend-item limited">Limited</span>
+            <span class="legend-item scarce">1 left</span>
+            <span class="legend-item full">Full</span>
           </div>
-          <div class="step">
-            <div class="step-num">3</div>
+        </div>
+
+        <div class="trade-filters">
+          <button class="trade-btn active" data-trade="all">All trades</button>
+          <button class="trade-btn" data-trade="handyman">🔨 Handyman</button>
+          <button class="trade-btn" data-trade="plumber">🔧 Plumber</button>
+          <button class="trade-btn" data-trade="electrician">⚡ Electrician</button>
+          <button class="trade-btn" data-trade="decorator">🎨 Decorator</button>
+          <button class="trade-btn" data-trade="builder">🏗️ Builder / Refurb</button>
+        </div>
+
+        <div class="map-layout">
+          <div class="full-map-wrap">
+            <svg id="londonMapSvg" class="london-map-full" viewBox="0 0 580 370" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="mapBg" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1"/>
+                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <ellipse cx="290" cy="185" rx="260" ry="172" fill="url(#mapBg)"/>
+              <circle cx="290" cy="185" r="55"  class="zone-ring"/>
+              <circle cx="290" cy="185" r="110" class="zone-ring"/>
+              <circle cx="290" cy="185" r="165" class="zone-ring"/>
+              <path class="london-outline-full" d="M105,62 C130,52 165,48 200,48 C230,46 260,42 295,38 C330,36 360,42 390,48 C420,52 445,50 465,58 C478,65 480,82 478,105 C476,130 470,155 468,178 C466,200 462,218 462,235 C460,250 455,265 445,280 C430,300 415,318 395,330 C370,344 345,350 315,352 C285,354 255,352 225,348 C195,344 170,338 148,330 C125,320 108,305 100,288 C90,268 87,245 87,222 C87,198 90,175 95,152 C100,128 105,108 105,88 Z"/>
+              <path class="thames-full" d="M87,218 C102,226 118,230 136,228 C153,226 168,218 184,210 C200,202 215,198 232,196 C248,194 262,192 276,190 C292,188 305,186 320,186 C336,186 350,188 364,192 C381,197 397,205 415,212 C432,218 450,220 468,218"/>
+              <g id="boroughNodes"></g>
+            </svg>
+          </div>
+
+          <div class="area-detail-panel" id="areaDetailPanel">
+            <div class="panel-placeholder">
+              <div class="placeholder-icon">📍</div>
+              <p>Tap a borough on the map to see available trades and claim your spot</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POST A JOB -->
+    <section id="post-job" class="post-job-section">
+      <div class="container">
+        <div class="post-job-inner">
+          <div class="post-job-copy">
+            <div class="eyebrow">For homeowners &amp; landlords</div>
+            <h2>Post a job, get matched fast</h2>
+            <p class="lead">Describe your project. Our AI scopes it, estimates costs, and matches you with verified pros in your borough — usually within the hour.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="feat-icon">🤖</span>
+                <div>
+                  <strong>AI quote builder</strong>
+                  <span>Instant cost estimate from your description and photos</span>
+                </div>
+              </li>
+              <li>
+                <span class="feat-icon">✓</span>
+                <div>
+                  <strong>Vetted professionals only</strong>
+                  <span>Every pro is manually verified with references checked</span>
+                </div>
+              </li>
+              <li>
+                <span class="feat-icon">⚡</span>
+                <div>
+                  <strong>Fast response</strong>
+                  <span>Average first response under 2 hours</span>
+                </div>
+              </li>
+              <li>
+                <span class="feat-icon">💷</span>
+                <div>
+                  <strong>Transparent pricing</strong>
+                  <span>No surprises. Itemised quotes before any work begins</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="post-job-form-wrap">
+            <div class="form-card">
+              <h3>Post your job</h3>
+              <form id="client-form" onsubmit="return false;">
+                <div class="field">
+                  <label>Trade needed</label>
+                  <select name="trade" required>
+                    <option value="">Select a trade...</option>
+                    <option>Handyman</option>
+                    <option>Plumber</option>
+                    <option>Electrician</option>
+                    <option>Decorator / Painter</option>
+                    <option>Builder / Refurbishment</option>
+                    <option>Landscaper / Garden</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Your London area</label>
+                  <select name="area" required>
+                    <option value="">Select a borough...</option>
+                    <option>Barnet</option><option>Camden</option><option>Hackney</option>
+                    <option>Hammersmith &amp; Fulham</option><option>Islington</option>
+                    <option>Kensington &amp; Chelsea</option><option>Lambeth</option>
+                    <option>Lewisham</option><option>Southwark</option>
+                    <option>Tower Hamlets</option><option>Wandsworth</option>
+                    <option>Westminster</option><option>Greenwich</option>
+                    <option>Richmond</option><option>Ealing</option><option>Croydon</option>
+                    <option>Other London area</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Describe the job</label>
+                  <textarea name="description" rows="3" placeholder="e.g. Replace leaking bathroom tap, repaint living room, fit new kitchen cabinets..."></textarea>
+                </div>
+                <div class="field">
+                  <label>Your email</label>
+                  <input type="email" name="email" placeholder="you@example.com" required>
+                </div>
+                <button type="submit" class="btn big primary full-width">Get matched now →</button>
+                <p class="form-note center">Free to post. No commitment until you choose a pro.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN AS PRO -->
+    <section id="join-pro" class="join-pro-section">
+      <div class="container">
+        <div class="section-head centered">
+          <div class="eyebrow urgent">Limited availability</div>
+          <h2>Claim your spot as a London pro</h2>
+          <p class="lead">We limit to <strong>3 professionals per trade, per borough</strong>. Fewer pros means more jobs for you — and many areas are already filling up.</p>
+        </div>
+
+        <div class="availability-table">
+          <div class="avail-header">
+            <span>Borough</span>
+            <span>Handyman</span>
+            <span>Plumber</span>
+            <span>Electrician</span>
+            <span>Decorator</span>
+            <span>Builder</span>
+          </div>
+          <div id="availabilityRows"></div>
+        </div>
+
+        <div class="join-cta-row">
+          <div class="join-form-card">
+            <div class="join-urgency">
+              <span class="pulse-dot red"></span>
+              <span>Spots are filling fast — <strong>12 pros</strong> joined this week</span>
+            </div>
+            <h3>Apply to join as a pro</h3>
+            <p>We manually verify every professional. Once approved, you go live in your chosen borough and start receiving leads.</p>
+            <form id="pro-form" onsubmit="return false;">
+              <div class="field-row">
+                <div class="field">
+                  <label>Full name</label>
+                  <input type="text" name="name" placeholder="Your name" required>
+                </div>
+                <div class="field">
+                  <label>Email</label>
+                  <input type="email" name="email" placeholder="you@example.com" required>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label>Your trade</label>
+                  <select name="trade">
+                    <option value="">Select trade...</option>
+                    <option>Handyman</option><option>Plumber</option>
+                    <option>Electrician</option><option>Decorator / Painter</option>
+                    <option>Builder / Refurbishment</option><option>Landscaper</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Your borough</label>
+                  <select name="borough">
+                    <option value="">Select borough...</option>
+                    <option>Barnet</option><option>Camden</option><option>Hackney</option>
+                    <option>Hammersmith &amp; Fulham</option><option>Islington</option>
+                    <option>Kensington &amp; Chelsea</option><option>Lambeth</option>
+                    <option>Lewisham</option><option>Southwark</option>
+                    <option>Tower Hamlets</option><option>Wandsworth</option>
+                    <option>Westminster</option><option>Greenwich</option>
+                    <option>Richmond</option><option>Ealing</option><option>Croydon</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn big primary full-width">Apply for a spot →</button>
+              <p class="form-note center">We'll review your application within 48 hours.</p>
+            </form>
+          </div>
+          <div class="join-benefits">
+            <h3>Why pros choose hdirect</h3>
+            <ul class="benefit-list">
+              <li>
+                <div class="benefit-icon">🎯</div>
+                <div>
+                  <strong>Quality leads only</strong>
+                  <p>Jobs are pre-qualified by AI before they reach you — no tyre-kickers</p>
+                </div>
+              </li>
+              <li>
+                <div class="benefit-icon">💰</div>
+                <div>
+                  <strong>No commission cuts</strong>
+                  <p>Flat monthly subscription. Keep 100% of what you earn</p>
+                </div>
+              </li>
+              <li>
+                <div class="benefit-icon">🤖</div>
+                <div>
+                  <strong>AI quote builder</strong>
+                  <p>Generate professional estimates from a brief in seconds</p>
+                </div>
+              </li>
+              <li>
+                <div class="benefit-icon">⭐</div>
+                <div>
+                  <strong>Verified badge</strong>
+                  <p>Stand out with a verified professional profile clients trust</p>
+                </div>
+              </li>
+              <li>
+                <div class="benefit-icon">📍</div>
+                <div>
+                  <strong>Borough exclusivity</strong>
+                  <p>Only 3 per trade per borough — you face less competition, earn more</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="how-section">
+      <div class="container">
+        <div class="section-head centered">
+          <h2>How it works</h2>
+          <p class="lead">Simple, transparent, and built for London.</p>
+        </div>
+        <div class="how-tabs">
+          <button class="how-tab active" data-tab="clients">For homeowners</button>
+          <button class="how-tab" data-tab="pros">For professionals</button>
+        </div>
+        <div class="how-steps" id="howStepsClients">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Post your job</h3>
+            <p>Describe the work and select your borough. Our AI drafts a scope and cost estimate instantly.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Get matched</h3>
+            <p>We match you with up to 3 verified pros in your borough who are available and rated for your job type.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card">
+            <div class="step-num">03</div>
             <h3>Book direct</h3>
-            <p>Connect with verified pros, agree the scope, and schedule. Simple and transparent.</p>
+            <p>Chat directly, agree the scope, schedule. No hidden fees, no middlemen — just great work done.</p>
+          </div>
+        </div>
+        <div class="how-steps hidden" id="howStepsPros">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Apply &amp; get verified</h3>
+            <p>Submit your application. We manually verify your identity, experience, and references within 48 hours.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Claim your borough</h3>
+            <p>Choose up to 3 boroughs. Once your spots are confirmed, you go live and start receiving leads directly.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Win work direct</h3>
+            <p>Receive pre-qualified leads, use AI quoting tools, manage jobs, and build your local reputation.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="for-clients" class="panel">
-      <div class="container twocol">
-        <div>
-          <h2>For clients — find talent</h2>
-          <p class="lead">Post a job and get fast, transparent estimates from verified UK handymen.</p>
-          <ul class="bullets">
-            <li>Only vetted, reliable professionals</li>
-            <li>Clear pricing with itemised options</li>
-            <li>Direct chat & flexible scheduling</li>
-          </ul>
-          <form id="client-form" class="inline-form" onsubmit="return false;">
-            <input type="text" name="job" placeholder="Describe your job (e.g., Paint 2 rooms)" required>
-            <input type="text" name="postcode" placeholder="Postcode" required>
-            <button type="submit" class="btn">Post a job</button>
-          </form>
-          <p class="form-note">Demo only — stored locally in your browser.</p>
-        </div>
-        <div class="card mini">
-          <h3>What you can expect</h3>
-          <ul class="ticks compact">
-            <li>Quotes in hours, not days</li>
-            <li>Verified identity & references</li>
-            <li>UK-first coverage</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="for-pros" class="panel alt">
-      <div class="container twocol">
-        <div>
-          <h2>For handymen — find work</h2>
-          <p class="lead">Get quality leads, access our scoping & quoting tool, and professional support for your end-to-end business.</p>
-          <ul class="bullets">
-            <li>Quality, UK-based leads</li>
-            <li>Access our AI quoting & coding tool</li>
-            <li>Professional support: quoting, scheduling, invoicing</li>
-          </ul>
-          <form id="pro-form" class="inline-form" onsubmit="return false;">
-            <input type="text" name="name" placeholder="Your name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <button type="submit" class="btn outline">Apply to join</button>
-          </form>
-          <p class="form-note">We manually verify every professional.</p>
-        </div>
-        <div class="card mini">
-          <h3>Why join</h3>
-          <ul class="ticks compact">
-            <li>No middlemen — you deal direct</li>
-            <li>Modern tools, simple workflow</li>
-            <li>Reliable payouts</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
+    <!-- LIVE ACTIVITY -->
+    <section class="activity-section">
       <div class="container">
-        <h2>Stay in the loop</h2>
-        <p>Launching UK-first. Get notified:</p>
-        <form id="waitlist-form" class="inline-form center" onsubmit="return false;">
-          <input type="email" name="email" placeholder="Email address" required>
-          <button type="submit" class="btn">Join waitlist</button>
-        </form>
-        <p class="muted small">Prefer email? <a href="mailto:hello@handyman.direct">hello@handyman.direct</a></p>
+        <div class="activity-header">
+          <h2>Live in London</h2>
+          <span class="live-badge"><span class="pulse-dot green"></span> Live feed</span>
+        </div>
+        <div class="activity-feed" id="activityFeed"></div>
       </div>
     </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-cta-inner">
+          <h2>Ready to get started?</h2>
+          <p>Whether you need a pro or are one — London's most direct platform is open.</p>
+          <div class="cta-pair">
+            <a href="#post-job" class="btn big primary">Post a job</a>
+            <a href="#join-pro" class="btn big ghost">Claim your pro spot</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container foot">
-      <div class="brand-row">
+      <div class="foot-brand">
         <a class="brand" href="#">
           <img src="/assets/favicon.svg" alt="" width="22" height="22">
-          <span>handyman<span class="dot">.</span>direct</span>
+          <span>h<span class="dot">direct</span></span>
         </a>
-        <span class="muted">© <span id="year"></span> UK-first</span>
+        <p class="muted">London's AI-powered home improvement network.<br>Connecting homeowners with the best local tradespeople.</p>
       </div>
-      <nav class="foot-links muted">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-      </nav>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Platform</h4>
+          <a href="#post-job">Post a job</a>
+          <a href="#join-pro">Join as pro</a>
+          <a href="#map">London map</a>
+          <a href="#how">How it works</a>
+        </div>
+        <div class="foot-col">
+          <h4>Trades</h4>
+          <a href="#">Handymen</a>
+          <a href="#">Plumbers</a>
+          <a href="#">Electricians</a>
+          <a href="#">Decorators</a>
+          <a href="#">Builders</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="mailto:hello@handyman.direct">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="container foot-bottom-inner">
+        <span class="muted">© <span id="year"></span> hdirect. London-first.</span>
+        <span class="muted">Made in 🇬🇧</span>
+      </div>
     </div>
   </footer>
 
